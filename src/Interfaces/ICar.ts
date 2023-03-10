@@ -1,10 +1,6 @@
-interface Car {
-  id?: string,
-  model: string,
-  year: number,
-  color: string,
-  status?: boolean | undefined,
-  buyValue: number,
+import IVehicle from './IVehicle';
+
+interface Car extends IVehicle {
   doorsQty: number,
   seatsQty: number
 }

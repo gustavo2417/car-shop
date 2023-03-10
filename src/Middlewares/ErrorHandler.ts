@@ -16,6 +16,11 @@ class ErrorHandler {
       next();
     }
 
+    if (error.message === 'Motorcycle not found') {
+      res.status(404).json({ message: error.message });
+      next();
+    }
+
     res.status(500).json({ message: error.message });
     next();
   }
